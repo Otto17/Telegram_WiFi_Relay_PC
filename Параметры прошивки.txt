@@ -1,0 +1,20 @@
+1) Нужно полностью очистить Flash ESP8266 через ESPTool.
+2) Выставить параметры и прошить ESP8266.
+
+
+Информация и стирание Flash в командной строке через Python:
+
+Информация о ESP8266: esptool.py -p COM7 -b 115200 flash_id
+Стереть SPI Flash:    esptool.py -p COM7 -b 115200 erase_flash
+
+
+Параметры платы в Arduino IDE:
+1) Выбрать плату "Generic ESP8266 Module"
+2) Builtin Led: 2
+3) Upload Speed: 921600
+4) CPU Frequency: 80 MHz
+5) Flash Size: 4MB (FS:1MB OTA:~1019KB)
+6) Flash Frequency: 40 MHz
+7) Erase Flash: All Flash Contents
+Остальное параметры - по умолчанию.
+Пытаться прошивать загрузчик не нужно, просто выставить параметры и загрузить скетч.
